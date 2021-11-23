@@ -7,7 +7,7 @@ import java.util.ArrayList;
 
 @Repository
 public interface UsuarioRepository extends CrudRepository<UsuarioModel,Long>{
-    //Debe ser un método abstracto
+    //Debe ser un método abstracto para que SpringBoot pueda usarlo
     public abstract ArrayList<UsuarioModel> findByPrioridad(Integer prioridad);
 
 }
