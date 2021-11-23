@@ -42,4 +42,14 @@ public class UsuarioController {
             return "No pudo eliminar el usuario con id" + id;
         }
     }
+
+    @DeleteMapping( path = "/all")
+    public String eliminarTodosLosUsuarios(){
+        boolean ok = this.usuarioService.eliminarTodosLosUsuarios();
+        if (ok){
+            return "Se eliminaron todos los usuarios de la tabla";
+        }else{
+            return "No se pudo realizar el proceso de eliminación de todos los usuarios";
+        }
+    }
 }
